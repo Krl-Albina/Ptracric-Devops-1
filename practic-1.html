@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Красивые карточки</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0f1020;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #a5a5bd;
+      margin-bottom: 45px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #1d1e35;
+      border: 1px solid #343550;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      border-color: #a77bff;
+      box-shadow: 0 18px 45px #8b5cf633;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 25px;
+    }
+
+    .tag {
+      color: #bf9aff;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 23px;
+      margin: 12px 0;
+    }
+
+    .description {
+      color: #aaaac2;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      filter: brightness(1.2);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Наши проекты ✨</h1>
+    <p class="subtitle">
+      Современные решения для цифрового мира
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" alt="Веб-дизайн">
+        <div class="content">
+          <span class="tag">Design</span>
+          <h2>Web Design</h2>
+          <p class="description">
+            Создаём красивые, удобные и современные
+            сайты с уникальным дизайном.
+          </p>
+          <button onclick="alert('Web Design')">
+            Подробнее →
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9d?w=700" alt="Мобильная разработка">
+        <div class="content">
+          <span class="tag">Development</span>
+          <h2>Mobile Apps</h2>
+          <p class="description">
+            Разрабатываем удобные мобильные
+            приложения с современным интерфейсом.
+          </p>
+          <button onclick="alert('Mobile Apps')">
+            Подробнее →
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700" alt="Искусственный интеллект">
+        <div class="content">
+          <span class="tag">Technology</span>
+          <h2>AI Solutions</h2>
+          <p class="description">
+            Используем искусственный интеллект
+            для создания инновационных проектов.
+          </p>
+          <button onclick="alert('AI Solutions')">
+            Подробнее →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
